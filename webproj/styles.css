@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #f2f2f2;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    height: 55px;
+  }
+  
+  @font-face {
+    font-family: "KONG";
+    src: url("kongtext.ttf");
+  }
+    body,header {
+        font-family: "KONG", sans-serif;
+        background-color: #ffffff;
+    }
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+/* Стили для модального окна */
+.modal {
+  display: none; /* скрываем модальное окно по умолчанию */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 58, 249, 0.317); /* полупрозрачный черный фон */
+}
+
+/* Стили для блока с формой */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+

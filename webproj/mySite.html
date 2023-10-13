@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This my site</title>
+  <link rel="stylesheet" href="C:/Users/Alexey/node_modules/nes.css/css/nes.min.css">
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<header>
+	<div class="logo">
+	  <a href="file:///C:/Users/Alexey/Desktop/Magister/sem3/Bylah/lab7/learning/mySite.html">
+	    <img src="logo.png" alt="Logo">
+	 </a>
+	 <a href="file:///C:/Users/Alexey/Desktop/Magister/sem3/Bylah/lab7/learning/mySite.html">
+	    <span class="nes-text is-warning">Alekom.com</span>
+	</a>
+		<p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+	</div>
+  </header>
+<body>
+
+	<div class="nes-container with-title" hid="0">
+		<p class="title">Account</p>
+		<p>Want to 
+		<button type="button" class="nes-btn is-primary" onclick="openModalReg()">register</button>
+		 or   
+		<button type="button" class="nes-btn is-success" onclick="openModal()">login</button>
+		</p>
+	  </div>
+	  <p>  </p>
+	  <div class="nes-container with-title">
+		<p class="title">More</p>
+		<p>Want to know
+		<button type="button" class="nes-btn is-warning" onclick="openModal()">about us</button>
+		</p>
+		
+	  </div>
+
+
+<div id="myModalReg" class="modal">
+	<div class="modal-content">
+	  <form action="reg.php" method="POST">
+	  <div class="nes-field">	
+		<label for="username">username:</label>
+		<input type="text" id="username" name="username"class="nes-field"><br><br>
+		<label for="email">email:</label>
+		<input type="text" id="email" name="email"class="nes-field"><br><br>
+		<label for="login">login:</label>
+		<input type="text" id="login" name="login"class="nes-field"><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"class="nes-field"><br><br>
+		<button type="submit" class="nes-btn is-success">Accept</button>
+		<button type="button" class="nes-btn is-error"onclick="closeModalReg()">Cancel</button>
+	  </form>
+	  </div>
+	</div>
+  </div>
+
+<!-- Модальное окно с формой ввода логина -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <form action="login.php" method="POST">
+	<div class="nes-field">	
+      <label for="username">Login:</label>
+      <input type="text" id="username" name="username"class="nes-field"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"class="nes-field"><br><br>
+      <button type="submit" class="nes-btn is-success">Log in</button>
+      <!-- <button type="button" onclick="closeModal()">Отмена</button> -->
+	  <button type="button" class="nes-btn is-error"onclick="closeModal()">Cancel</button>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+function openModalReg() {
+    document.getElementById("myModalReg").style.display = "block";
+  }
+  // Функция для открытия модального окна
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  // Функция для закрытия модального окна
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  function closeModalReg() {
+    document.getElementById("myModalReg").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
